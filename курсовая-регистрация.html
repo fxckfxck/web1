@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+input{
+    height: 45px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3B5983;
+    border: 2px solid #E9F2FF;
+    border-radius: 5px;
+    padding-left: 25px;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #c1d9fd;
+
+
+}
+
+main{
+    background: #f1f5fe;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    position: fixed;
+    z-index: 1;
+    width: 534px;
+    height: 534px;
+    border-radius: 50%;
+    background: #f7faff;
+    box-shadow: 0px 4px 70px 6px rgba(217, 229, 255, 0.25);
+    animation-name: fadeCircle;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeCircle{
+    0%{
+        width: 1994px;
+        height: 1994px;
+    }
+    10%{
+        width: 1848px;
+        height: 1848px;
+    }
+    20%{
+        width: 1702px;
+        height: 1702px;
+    }
+    30%{
+        width: 1556px;
+        height: 1556px;
+    }
+    40%{
+        width: 1410px;
+        height: 1410px;
+    }
+    50%{
+        width: 1264px;
+        height: 1264px;
+    }
+    60%{
+        width: 1118px;
+        height: 1118px;
+    }
+    70%{
+        width: 972px;
+        height: 972px;
+    }
+    80%{
+        width: 826px;
+        height: 826px;
+    }
+    90%{
+        width: 680px;
+        height: 680px;
+    }
+    100%{
+        width: 534px; 
+        height: 534px;
+    }
+}
+
+.register-form{
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+    max-width: 415px;
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    animation-name: fadeForm;
+    animation-duration: .65s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeForm{
+    0%{
+    opacity: 0;
+    
+    }
+    25%{
+        opacity: .25;
+        
+    }
+    50%{
+        opacity: .50;
+        
+    }
+    75%{
+        opacity: .75;
+        
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+
+.form-title{
+    color: #30507D;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 38px;
+    }
+
+.form-fields{
+    margin-bottom: 13px;
+}
+
+.button{
+    font-weight: bold;
+    display: block;
+    height: 35px;
+    width: 100%;
+    background: #247FFF;
+    border-radius: 5px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+}
+
+.button:hover{
+    background-color: #0d6cf2;
+}
+
+a{
+    text-decoration: none;
+}
+
+.button-google{
+    font-weight: bold;
+    display: block;
+    height: 35px;
+    width: 100%;
+    background: #f2f6ff;
+    border-radius: 5px;
+    color: #c6cfdc;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.button-google:hover{
+    background: #e2e6f0;
+    color: black;
+
+}
+
+.divider{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #405D87;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+    </style>
+    <title>Реєстрація</title>
+</head>
+
+<body>
+    <main>
+        <div class="circle"></div>
+        <div class="register-form">
+        <h1 class="form-title">Реєстрація</h1>
+        <div class="form-fields">
+            <div class="form-fields">
+                <input type="text" placeholder="Ім'я" id="name">
+            </div>
+
+            <div class="form-fields">
+                <input type="text" placeholder="Пошта" id="email">
+            </div>
+
+            <div class="form-fields">
+                <input type="text" placeholder="Пароль (мінімум 6 символів)" id="password">
+            </div>
+
+            <div class="form-fields">
+                <input type="text" placeholder="Повторіть пароль" id="password2">
+            </div>
+        </div>
+ 
+        <div class="form-button">
+            <button class="button" id="registerBut">Реєстрація</button>
+            <div class="divider">або</div>
+            <a href="курсовая-вход.html" class="button-google">Вхід</a>
+        </div>
+    </div>
+    </main>
+
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDQ9oYExUZ580AJ_HUbnZ0C6qot24F3yE4",
+      authDomain: "firstproj-536ff.firebaseapp.com",
+      databaseURL: "https://firstproj-536ff-default-rtdb.firebaseio.com",
+      projectId: "firstproj-536ff",
+      storageBucket: "firstproj-536ff.appspot.com",
+      messagingSenderId: "812751731917",
+      appId: "1:812751731917:web:2e215c1562146bed7c7d84"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import {getDatabase, set, update, remove, ref, child}
+    from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js"
+
+    const db = getDatabase();
+    var name = document.querySelector("#name");
+    var email = document.querySelector("#email");
+    var password = document.querySelector("#password");
+    var password2 = document.querySelector("#password2");
+
+    var registerButton = document.querySelector("#registerBut");
+
+
+    function InsertData(){
+        if(password.value == password2.value && password.value != null && password.value.length >= 6){
+            if(name.value != null  && name.value != "")
+            {
+                if(email.value != null && email.value != "")
+                {
+                            set(ref(db, "Користувачі АЗС/" + email.value),{
+                    Name: name.value,
+                    Email: email.value,
+                    Password: password.value
+                    })
+                    alert("Користувач успішно зареєстрований")
+                    .catch((error)=> {
+                    alert(error)
+                    })
+                }
+                else{
+                    alert("Упс, ви маєте заповнити поле \"Пошта\"")
+                }
+        
+            }
+            else{
+                alert("Упс, ви маєте заповнити поле \"Ім'я\"")
+            }
+
+
+    }else{
+        alert("Упс, пароль не співпадає або містить меньше 6 символів!")
+    }
+    }
+
+    function RemoveData(){}
+
+    function UpdateData(){}
+
+    registerButton.addEventListener('click', InsertData)
+
+  </script>
+  
+  
+
+
+</html>
